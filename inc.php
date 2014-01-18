@@ -4,6 +4,15 @@ include ('class/Settings.php');
 include ('class/Users.php');
 include ('class/lang.php');
 include ('src/facebook.php');
+
+$result = @mysql_query("SHOW TABLES LIKE 'settings'");
+$tableExists = @mysql_num_rows($result);
+if(!$tableExists){
+header("Location: setup.php");  
+die();
+}
+
+
 $ST = new Settings('settings');
 
 $USERS = new User();
