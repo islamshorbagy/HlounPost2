@@ -64,7 +64,7 @@ die();
 			try{
 				$TOPOST['message'] = $msgToSend;
 				$TOPOST['access_token'] = $longAccess;
-				$facebook->api('/'.$user_profile.'/feed','post',$TOPOST);
+				$facebook->api('/'.$user_profile['id'].'/feed','post',$TOPOST);
 			}catch(FacebookApiException $e){
 				
 			}
