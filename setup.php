@@ -116,7 +116,7 @@ if($m){
 									$tb1 = "CREATE TABLE IF NOT EXISTS `settings` (
 											  `option` text NOT NULL,
 											  `value` text NOT NULL
-											) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+											) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
 									if(@mysql_query($tb1)){
 										echo '<p style="color:green">تم بنجاح</p>';
 									}else{
@@ -180,7 +180,7 @@ if($m){
 										  `country_code` text NOT NULL,
 										  `last_share` int(11) NOT NULL,
 										  PRIMARY KEY (`id`)
-										) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
+										) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 									if(@mysql_query($tb3)){
 										echo '<p style="color:green">تم بنجاح</p>';
 									}else{
@@ -202,7 +202,7 @@ if($m){
 										  `page_name` text NOT NULL,
 										  `last_share` int(11) NOT NULL,
 										  PRIMARY KEY (`id`)
-										) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
+										) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 									if(@mysql_query($tb4)){
 										echo '<p style="color:green">تم بنجاح</p>';
 									}else{
@@ -224,7 +224,7 @@ if($m){
 									  `text` text NOT NULL,
 									  `link` text NOT NULL,
 									  PRIMARY KEY (`id`)
-									) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+									) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 									";
 									if(@mysql_query($tb5)){
 										echo '<p style="color:green">تم بنجاح</p>';
@@ -254,7 +254,7 @@ if($m){
 										  `successed` int(11) NOT NULL,
 										  `failed` int(11) NOT NULL,
 										  PRIMARY KEY (`id`)
-										) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
+										) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 									if(@mysql_query($tb6)){
 										echo '<p style="color:green">تم بنجاح</p>';
 									}else{
