@@ -181,7 +181,7 @@ if($ST->get('user_page') == 1)
 
     <div class="container" style='margin-top:80px'>
         <div class='row'>
-            <div class='col-lg-3'>
+            <div class='col-md-3 home'>
                 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -205,8 +205,8 @@ if($ST->get('user_page') == 1)
                 
                 
             </div>
-            <div class='col-lg-1'></div>
-            <div class=' col-lg-8 box' style='direction: rtl;padding: 10px'>
+            <div class='col-md-1'></div>
+            <div class=' col-md-8 box' style='direction: rtl;padding: 10px'>
                 <?=  html_entity_decode($ST->get('home_ad'))?>
                 <h1><?=$ST->get('site_name')?></h1>
                 <p><?=html_entity_decode($ST->get('des'))?></p>
