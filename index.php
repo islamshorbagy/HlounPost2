@@ -118,7 +118,7 @@ if($ST->get('user_page') == 1)
                  FB.api('/me', function(response) {
                      $('.userprofileshow').show();
                      $('.imguser').attr('src','https://graph.facebook.com/'+response.id+'/picture?type=large');
-                     
+                     $('.btn-reg').hide();
                  });
             }
             
@@ -130,7 +130,7 @@ if($ST->get('user_page') == 1)
                  outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth,
                  outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22),
                  width    = 500,
-                 height   = 270,
+                 height   = 500,
                  left     = parseInt(screenX + ((outerWidth - width) / 2), 10),
                  top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
                  features = (
@@ -140,7 +140,7 @@ if($ST->get('user_page') == 1)
                     ',top=' + top
                   );
  
-            newwindow=window.open('<?=$loginUrl?>','Login_by_facebook',features);
+            newwindow=window.open('<?=$ST->get('url')?>/register.php','Login_by_facebook',features);
  
            if (window.focus) {newwindow.focus()}
           return false;
