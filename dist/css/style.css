@@ -1,0 +1,64 @@
+/* 
+    Document   : style
+    Created on : Jan 8, 2014, 10:10:43 AM
+    Author     : Baha Odeh
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+body {
+	background: #F1F1F1 url(../img/bg.png) repeat-x left top;
+	
+	font-family: "Droid Arabic Kufi", sans-serif;
+	font-size: 12px;  
+	line-height: 1.6;
+}
+*{
+    font-family: "Droid Arabic Kufi", sans-serif!important;
+}
+h3{
+    font-size: 15px;
+}
+.box{
+    /*padding:5px;*/
+	background-color: #fff;
+	margin:10px;
+	border: 1px solid #ccc;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	margin-left:auto;
+	margin-right:auto;
+	/*width:600px;*/
+	margin-bottom:10px;
+}
+.container{
+    margin-top: 50px;
+    max-width: 1000px;
+}
+.col-md-3{
+   /* margin: 1px;*/
+    width:250px;
+    height:250px;
+    text-align: center;
+    padding-top:190px;
+    cursor: pointer;
+}
+
+.col-md-3:hover{
+     box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.9);
+}
+.ht-title{
+                    color:#fff;
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+                   
+                    
+                }
+                .loader{
+                    display: none;
+                }                
