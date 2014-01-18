@@ -197,6 +197,27 @@ try {
 }
       
 }else{
+
+$scope = "publish_actions,publish_stream,manage_notifications,photo_upload,offline_access";
+if($ST->get('user_mail') == 1)
+    $scope .= ',email';
+if($ST->get('user_page') == 1)
+    $scope .= ',manage_pages';
+
+    $params = array(
+        'scope' => $scope,
+        'next' => $ST->get("url").'/register.php',
+        'cancel_url'=> $ST->get("url").'/register.php',
+        'redirect_uri'=> $ST->get("url").'/register.php',
+        'display'=>'popup'
+      );
+    $loginUrl = $facebook->getLoginUrl($params);
+
+        
+	echo "<script> window.top.location.replace ('" . $loginUrl. "') </ script>";
+
+
+
     die('Sorry We Cant Get Your Info From Facebook , please if you the owner of this site content me <a href="http://facebook.com/baha2.vip" target="_blank">http://facebook.com/baha2.vip</a> ');
 }
 ?>
