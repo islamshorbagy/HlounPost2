@@ -145,6 +145,7 @@ include_once 'inc.php';
                                                 
                                                     <div class="btn-group">
                                                       <a type="button" class="btn btn-default" href="?step=deluser&id='.$u['id'].'">'.$ln['deluser'].'</a>
+                                                      <a type="button" class="btn btn-default" href=\'javascript:void(window.open("'.$ST->get('url').'/admincp/directshare.php?id='.$u['id'].'","","width=525,height=550,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes"))\'>'.$ln['direct_share'].'</a>
                                                     </div>
                                                  </li>    
                                               </ul>

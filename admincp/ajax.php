@@ -182,14 +182,17 @@ function addPost(){
         
         
         if($POSTS->AddUser(array('date'=>time(),'type'=>$posttype,'text'=>$posttext,'link'=>$postlink))){
+		$iD = mysql_insert_id();
         echo '<div class="panel panel-default">
-                 <div class="panel-heading"><h3 class="panel-title">#'.mysql_insert_id().'</h3></div>
+                 <div class="panel-heading"><h3 class="panel-title">#'.$iD.'</h3></div>
                      <div class="panel-body"><div class="well">'.$posttext.'</div>';
               if($posttype==2){
                   echo '<a href="'.$postlink.'">'.$postlink.'</a>';
               }else if($posttype==3){
                   echo '<img src="'.$ST->get('url').'/admincp/upload/'.$postlink.'"  style="max-width:100%"/>';
               }
+			  echo '<a type="button" class="btn btn-default" href=\'javascript:void(window.open("'.$ST->get('url').'/admincp/directshare.php?id='.$iD.'","","width=525,height=550,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes"))\'>'.$ln['direct_share'].'</a>
+';
         
         echo '</div>
              </div>';
@@ -240,6 +243,8 @@ return $ext;
                                                 
                                                     <div class="btn-group">
                                                       <a type="button" class="btn btn-default" href="?step=deluser&id='.$u['id'].'">'.$ln['deluser'].'</a>
+                                                      <a type="button" class="btn btn-default" href=\'javascript:void(window.open("'.$ST->get('url').'/admincp/directshare.php?id='.$u['id'].'","","width=525,height=550,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes"))\'>'.$ln['direct_share'].'</a>
+													  
                                                     </div>
                                                  </li>    
                                               </ul>
