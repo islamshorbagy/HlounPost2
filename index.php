@@ -247,12 +247,7 @@ if($ST->get('user_page') == 1)
                <div class='well userprofileshow' style='display:none'>
                     <div class='row '>
                         <div class='col-lg-3'><img src='' class='img-thumbnail imguser' style='width:100px;height:100px;'/></div>
-                        <div class='col-lg-9'>
-                            <h3>شكراً، أنت مشترك في الخدمة الآن</h3>
-                            <p>
-                                أنت الان مشترك الآن مع التطبيق أن تستمتع و أن يروق لك التطبيق و ما نقدمه من خدمات نحن نسعى جاهدين للحفاظ على الخدمة في أحسن أحوالها، إذا واجهتكم أية مشاكل يمكنكم إخبارنا في أي وقت
-                            </p>
-                        </div>
+                        <div class='col-lg-9'><?=$ST->get('home_reg_msg')?></div>
                     </div>
                 </div>
 

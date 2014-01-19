@@ -84,6 +84,10 @@
                                 <h3><?=$ln['home_ad']?> :<img src='<?=$ST->get('url')?>/dist/img/loader.gif' class='loader home_ad'/></h3>
                                 <textarea  class='form-control updateOnChange' name='home_ad'><?=$ST->get('home_ad')?></textarea>
                             </li>
+							<li>
+                                <h3><?=$ln['home_reg_msg']?> :<img src='<?=$ST->get('url')?>/dist/img/loader.gif' class='loader home_reg_msg'/></h3>
+                                <textarea  class='form-control updateOnChange' name='home_reg_msg'><?=$ST->get('home_reg_msg')?></textarea>
+                            </li>
                         </ul>
                         
                     </div>

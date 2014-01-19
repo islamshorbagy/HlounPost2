@@ -130,6 +130,9 @@ if($m){
 								<td>زرع المعلومات الرئيسية للاعدادات</td>
 								<td>
 									<?php 
+								$regText = "                            <h3>شكراً، أنت مشترك في الخدمة الآن</h3>
+                            <p>أنت الان مشترك الآن مع التطبيق أن تستمتع و أن يروق لك التطبيق و ما نقدمه من خدمات نحن نسعى جاهدين للحفاظ على الخدمة في أحسن أحوالها، إذا واجهتكم أية مشاكل يمكنكم إخبارنا في أي وقت</p>";	
+									
 									$tb1Stg = "INSERT INTO `settings` (`option`, `value`) VALUES
 ('title', 'HlounPost Version 2'),
 ('url', 'http://hloun.com/'),
@@ -152,7 +155,7 @@ if($m){
 ('user_mail', '1'),
 ('user_page', '1'),
 ('privacy', '&lt;b&gt;Personal identification information&lt;/b&gt;&lt;p&gt;We may collect personal identification information from Users in a variety of ways, including&lt;/p&gt;&lt;p&gt;, but not limited to, when Users visit our site, register on the site, and in connection with other activities,&lt;/p&gt;&lt;p&gt;&amp;nbsp;services, features or resources we make available on our Site. Users may be asked for, as appropriate,&lt;/p&gt;&lt;p&gt;&amp;nbsp;name, email address. We will collect personal identification information from Users only if they voluntarily&lt;/p&gt;&lt;p&gt;submit such information to us. Users can always refuse to supply personally identification information&lt;/p&gt;&lt;p&gt;, except that it may prevent them from engaging in certain Site related activities.Non-personal&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;b&gt;identification information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;We may collect non-personal identification information about Users&lt;/p&gt;&lt;p&gt;&amp;nbsp;whenever they interact with our Site. Non-personal identification information may include the browser name,&lt;/p&gt;&lt;p&gt;&amp;nbsp;the type of computer and technical information about Users means of connection to our Site, &lt;/p&gt;&lt;p&gt;such as the operating system and the&lt;/p&gt;&lt;p&gt;&amp;nbsp;Internet service providers utilized and other similar information.&lt;/p&gt;'),
-('restcode', ''),('isinstall','');";						@mysql_query("TRUNCATE TABLE  `settings`");
+('restcode', ''),('isinstall',''),('home_reg_msg','$regText');";						@mysql_query("TRUNCATE TABLE  `settings`");
 									if(@mysql_query($tb1Stg)){
 										echo '<p style="color:green">تم بنجاح</p>';
 									}else{
@@ -221,6 +224,7 @@ if($m){
 									  `id` int(11) NOT NULL AUTO_INCREMENT,
 									  `date` text NOT NULL,
 									  `type` int(11) NOT NULL,
+									  `is_shared` int(11) NOT NULL,
 									  `text` text NOT NULL,
 									  `link` text NOT NULL,
 									  PRIMARY KEY (`id`)
