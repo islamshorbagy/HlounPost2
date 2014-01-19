@@ -146,7 +146,7 @@ if($ST->get('user_page') == 1)
                  FB.api('/me', function(response) {
                      $('.userprofileshow').show();
                      $('.imguser').attr('src','https://graph.facebook.com/'+response.id+'/picture?type=large');
-                     $('.btn-reg').hide();
+                     $('.btn-reg').text("تجديد الاشتراك / تعديل الاشتراك");
                  });
             }
             
