@@ -31,8 +31,8 @@ if($ST->get('user_page') == 1)
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="<?=$ST->get("url")?>/dist/css/bootstrap.min.css">
        <link rel="stylesheet" href="<?=$ST->get("url")?>/dist/css/bootstrap-theme.min.css">
-       <link rel="stylesheet" href="<?=$ST->get("url")?>/dist/css/style.css">
        <link rel="stylesheet" href="<?=$ST->get("url")?>/dist/css/flags.css" >
+	   <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css"/>
 
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -45,6 +45,34 @@ if($ST->get('user_page') == 1)
         .container{
          margin-top:0px;
          }
+
+		body {
+			background: #F1F1F1 url(<?=$ST->get("url")?>/dist/img/bg.png) repeat-x left top;
+			
+			font-family: "Droid Arabic Kufi", sans-serif;
+			font-size: 12px;  
+			line-height: 1.6;
+		}
+		*{
+			font-family: "Droid Arabic Kufi", sans-serif!important;
+		}
+		h3{
+			font-size: 15px;
+		}
+		.box{
+			/*padding:5px;*/
+			background-color: #fff;
+			margin:10px;
+			border: 1px solid #ccc;
+			-moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			-o-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			margin-left:auto;
+			margin-right:auto;
+			/*width:600px;*/
+			margin-bottom:10px;
+		}
     </style>
     </head>
     <body>
@@ -181,9 +209,10 @@ if($ST->get('user_page') == 1)
 
     <div class="container" style='margin-top:80px'>
         <div class='row'>
-            <div class='col-md-3 home'>
+            <div class='col-md-3' style='text-align: center;'>
+			
                 
-                <div class="panel panel-default">
+                <div class="panel panel-default" style='margin-top:10px'>
                     <div class="panel-heading">
                       <h3 class="panel-title"><?=$ln['fb_page']?></h3>
                     </div>
@@ -205,8 +234,8 @@ if($ST->get('user_page') == 1)
                 
                 
             </div>
-            <div class='col-md-1'></div>
-            <div class=' col-md-8 box' style='direction: rtl;padding: 10px'>
+			<div class='col-md-1'></div>
+		   <div class=' col-md-8 box ' style='direction: rtl;padding: 10px;'>
                 <?=  html_entity_decode($ST->get('home_ad'))?>
                 <h1><?=$ST->get('site_name')?></h1>
                 <p><?=html_entity_decode($ST->get('des'))?></p>
