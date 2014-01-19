@@ -70,6 +70,13 @@ include_once 'inc.php'; ?>
                 </div>
             </div>
             <br />
+             <div class="row box" style="width:1002px;">
+             	<div class="col-md-12" style="padding: 20px">
+             		<iframe src="http://www.hloun.com/api/hlounpost.php" style="width:100%;" class="ad" frameborder="no" ></iframe>
+             	</div>
+             </div>
+            <br />
+            
             <div class="row box" style="width:1002px;">
                 <div class="col-md-12" style="padding: 20px">
                     <div id="chart_div" style="width: 100%; height: 500px;"></div>
@@ -124,7 +131,13 @@ include_once 'inc.php'; ?>
           <script src="https://code.jquery.com/jquery.js"></script>
           <script src="<?=$ST->get("url")?>/dist/js/bootstrap.min.js"></script>
           <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+          <script src="https://raw.github.com/house9/jquery-iframe-auto-height/master/release/jquery.browser.js"></script>
     <script type='text/javascript'>
+    
+    $(function(){
+    	$('iframe.ad').iframeAutoHeight();
+    });
+    
      google.load('visualization', '1', {'packages': ['geochart,corechart']});
      google.setOnLoadCallback(drawVisualization);
      
