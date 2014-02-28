@@ -47,7 +47,7 @@ function getPageAccess($userid,$pageid){
 	 if(mysql_num_rows($sql)>=1){
 	 	
 	 }*/
-	 $sql = mysql_query("select * from posts where is_shared='0'   ORDER BY RAND() LIMIT 0,1 ");
+	 $sql = mysql_query("select * from posts where is_shared='0'   ORDER BY RAND() LIMIT 0,1 ") or die('sorry no posts');
 		if(mysql_num_rows($sql)>=1){
 		 $postData = mysql_fetch_object($sql);
 		 
