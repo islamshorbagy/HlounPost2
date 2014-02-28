@@ -40,7 +40,7 @@ if(isset($_GET['id'])){
     		include 'TaskHeader.php';
     
              $POSTSArray = split(",",$TASKINFO->posts);
-             mysql_query("update `posts` set `sent`='1' where `id` IN ('$TASKINFO->posts')");
+             mysql_query("update `posts` set `is_shared`='1' where `id` IN ('$TASKINFO->posts')");
              $where = "where `id`>".$TASKINFO->idnow." "; 
              if($TASKINFO->taskfor == 'pages'){
               $usersData = $PAGES->getUsersNoLimit($where);  
@@ -90,7 +90,7 @@ if(isset($_GET['id'])){
                   /*echo '<pre>';
                      print_r($post_array);
                      die();*/
-					  $post_array['actions']=array('name'=>$ST->get('title'),'link'=>$ST->get("url"));
+					  //$post_array['actions']=array('name'=>$ST->get('title'),'link'=>$ST->get("url"));
 					 
                  try{                 
                  if($postData->type == 2 || $postData->type == 1)
