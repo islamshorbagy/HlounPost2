@@ -70,6 +70,41 @@ include_once 'inc.php'; ?>
                 </div>
             </div>
             <br />
+			<div class="row box" style="width:1002px;">
+							<div class="col-md-12">
+								<table style="width:100%;padding:10px;text-align:right">
+									<tr>
+										<td>الاصدار الثاني</td>
+										<td>سكربت ليون بوست</td>
+									</tr>
+									<tr>
+										<td><a href="http://baha2.in/">Baha'a Odeh</a></td>
+										<td>برمجة</td>
+									</tr>
+									<tr>
+										<td><a href="http://hloun.com">Hloun.com</a></td>
+										<td>الموقع الرسمي</td>
+									</tr>
+									<tr>
+										<td><input type='text' class='form-control' value='wget <?=$ST->get('url')?>/admincp/corn.php'/></td>
+										<td>كود الكورن</td>
+									</tr>
+									<tr>
+										<td><input type='text' class='form-control' value='wget <?=$ST->get('url')?>/admincp/autoshare.php'/></td>
+										<td>كود النشر الالي</td>
+									</tr>
+									<tr>
+										<td><a href="<?=$ST->get('url')?>/admincp/backup.php">من هنا</a></td>
+										<td>نسخة من القاعدة <span>مرة واحدة يوميا</span></</td>
+									</tr>
+									<tr>
+										<td><a  href="http://hloun.org/forum/">من هنا</a></td>
+										<td>منتدى الدعم الفني</td>
+									</tr>
+								</table>
+							</div>
+
+			</div>            
              <div class="row box" style="width:1002px;">
              	<div class="col-md-12" style="padding: 20px">
              		<iframe src="http://www.hloun.com/api/hlounpost.php" style="width:100%;" class="ad" frameborder="no" ></iframe>
@@ -110,20 +145,7 @@ include_once 'inc.php'; ?>
                      <div id="piechart_3d2" style="width: 100%; height: 300px;"></div>
                 </div>
             </div>
-            <div class="row box" style="width:1002px;direction: rtl">
-                <div class="col-md-6">
-                    <h4>الاصدار الثاني</h4>
-                    <h4><a href="http://baha2.in/">Baha'a Odeh</a></h4>
-                    <h4><a href="http://hloun.com">Hloun.com</a></h4>
-                    <input type='text' class='form-control' value='wget <?=$ST->get('url')?>/admincp/corn.php'/>
-                </div>
-                <div class="col-md-6">
-                    <h4>سكربت ليون بوست</h4>
-                    <h4>برمجة</h4>
-                    <h4>الموقع الرسمي</h4>
-                    <h4>كود الكورن</h4>
-                </div>        
-            </div>
+            
             <?=COPYRIGHT?>
         </div>
         
