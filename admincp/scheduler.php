@@ -234,7 +234,7 @@ include_once 'inc.php';
                    //  alert($('select[name=count]').val());
                    selectedall = false;
                });
-               $('input[type=submit').on('click',function(){
+               $('input[type=submit]').on('click',function(){
                    $('#imageloadstatus').show();
                    
                    var $posts = $.trim($('input[name=posts]').val());
